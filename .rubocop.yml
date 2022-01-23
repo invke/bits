@@ -1,0 +1,77 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-performance
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - bin/*
+    - db/schema.rb
+
+# Lint
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - spec/**/*
+
+# Layout
+
+Layout/AccessModifierIndentation:
+  EnforcedStyle: outdent
+
+Layout/HashAlignment:
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
+
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+
+# Style
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - Gemfile
+    - db/**/*
+
+Style/IfUnlessModifier:
+  Exclude:
+    - config/**/*
+
+Style/Documentation:
+  Exclude:
+    - config/**/*
+    - db/**/*
+
+# Metrics
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+    - config/**/*
+
+Metrics/ClassLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 16
+
+RSpec/MultipleMemoizedHelpers:
+  Max: 8
+
+# RSpec
+
+RSpec/NestedGroups:
+  Max: 5
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Max: 10
