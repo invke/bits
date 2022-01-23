@@ -12,8 +12,8 @@ gem "sqlite3", "~> 1.4"
 gem "stimulus-rails"
 gem "turbo-rails"
 
-group :development, :test do
-  gem "debug", platforms: %i[mri mingw x64_mingw]
+group :test do
+  gem "rspec-rails"
 end
 
 group :development do
